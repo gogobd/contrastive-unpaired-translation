@@ -106,15 +106,15 @@ bash ./datasets/download_cut_dataset.sh grumpifycat
 ```
 The dataset is downloaded and unzipped at `./datasets/grumpifycat/`.
 
-- To view training results and loss plots, run `python -m visdom.server` and click the URL http://localhost:8097.
+- To view training results and loss plots, run `python -m visdom.server -port 8081` and click the URL http://localhost:8097.
 
 - Train the CUT model:
 ```bash
-python train.py --dataroot ./datasets/grumpifycat --name grumpycat_CUT --CUT_mode CUT
+python train.py --display_port 8081 --dataroot ./datasets/grumpifycat --name grumpycat_CUT --CUT_mode CUT
 ```
  Or train the FastCUT model
  ```bash
-python train.py --dataroot ./datasets/grumpifycat --name grumpycat_FastCUT --CUT_mode FastCUT
+python train.py --display_port 8081 --dataroot ./datasets/grumpifycat --name grumpycat_FastCUT --CUT_mode FastCUT
 ```
 The checkpoints will be stored at `./checkpoints/grumpycat_*/web`.
 

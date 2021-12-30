@@ -42,7 +42,6 @@ RUN curl -sfLO https://open-vsx.org/api/ms-toolsai/jupyter/2021.8.12/file/ms-too
 WORKDIR /app
 CMD ~/.local/bin/code-server --bind-addr 0.0.0.0:8080 /app
 
-# docker build -t cut .
-# docker run -v $(pwd):/app -p 8080:8080 -p ... -it -d cut
-# docker exec -it <dontainer_id> cat /root/.config/code-server/config.yaml
+# docker build -t contrastive-unpaired-translation .
+# docker exec -it $(docker run --gpus all -v $(pwd):/app -p 8080:8080 -p 8081:8081 -it -d contrastive-unpaired-translation) cat /root/.config/code-server/config.yaml
 
