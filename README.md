@@ -106,7 +106,7 @@ bash ./datasets/download_cut_dataset.sh grumpifycat
 ```
 The dataset is downloaded and unzipped at `./datasets/grumpifycat/`.
 
-- To view training results and loss plots, run `python -m visdom.server -port 8081` and click the URL http://localhost:8097.
+- To view training results and loss plots, run `python -m visdom.server -port 8081` and click the URL http://localhost:8081.
 
 - Train the CUT model:
 ```bash
